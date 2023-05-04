@@ -20,11 +20,7 @@ on:
         default: 'false'
 
 env:  REPO_Ur: https://github.com/openwrt/openwrt.git
-  cd openwrt
-    run: |
-  git tag
-  git checkout V22.03.3
-   
+  
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -64,7 +60,8 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
+        git tag
+        git checkout openwrtv22.03.3
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
