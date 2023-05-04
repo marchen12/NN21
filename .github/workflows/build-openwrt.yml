@@ -19,7 +19,7 @@ on:
         required: false
         default: 'false'
 
-env:  REPO_Ur.: https://github.com/openwrt/openwrt.gt
+env:  REPO_Ur: https://github.com/openwrt/openwrt.git
   cd openwrt
     run: |
   git tag
