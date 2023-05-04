@@ -20,10 +20,10 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt.git
+  REPO_URL: https://github.com/openwrt/openwrt.gi  
   cd openwrt
-  git tag
-  git chechout V22.03.3
+   git tag
+   git checkout V22.03.3
    
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
