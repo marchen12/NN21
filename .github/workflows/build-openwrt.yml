@@ -19,8 +19,7 @@ on:
         required: false
         default: 'false'
 
-env:
-  REPO_URL: https://github.com/openwrt/openwrt.gi  
+env:  REPO_Ur.: https://github.com/openwrt/openwrt.gt
 cd openwrt
 git checkout V22.03.3
    
