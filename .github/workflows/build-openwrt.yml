@@ -21,7 +21,10 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-
+  cd openwrt
+  git tag
+  git chechout V22.03.3
+   
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
