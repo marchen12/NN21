@@ -22,8 +22,6 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   
-   sed -i '$a src-git opentopd  https://github.com/sirpdboy/sirpdboy-package' feeds.conf.default
-
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: LEsirboyAC2100.config
