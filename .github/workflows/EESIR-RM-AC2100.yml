@@ -80,7 +80,7 @@ jobs:
 
     - name: Configuration Customization - EESIR-RM-AC2100
       env:
-        CONFIG_FILE: 'EESIR-RM-AC2100'
+        CONFIG_FILE: 'EESIR-RM-AC2100.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
