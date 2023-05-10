@@ -5,7 +5,7 @@
 # Youtube Channel： Sirchen
 #=================================================
 
-name: yopenwrt
+name: 2penwrt
 
  Add a button to trigger the workflow
 on: 
@@ -56,7 +56,8 @@ jobs:
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
-        echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+        sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+        sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
         
     - name: Update & Install feeds
       working-directory: ./openwrt
@@ -76,9 +77,9 @@ jobs:
     #  run: |
     #    git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
 
-    - name: Configuration Customization - yopenwrt
+    - name: Configuration Customization - 2penwrt
       env:
-        CONFIG_FILE: 'yopenwrt.config'
+        CONFIG_FILE: '2penwrt.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
