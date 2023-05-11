@@ -5,7 +5,7 @@
 # Youtube Channel： Sirchen
 #=================================================
 
-name: 2penwrt
+name: p2100
 
  Add a button to trigger the workflow
 on: 
@@ -77,9 +77,9 @@ jobs:
     #  run: |
     #    git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
 
-    - name: Configuration Customization - 2penwrt
+    - name: Configuration Customization - p2100
       env:
-        CONFIG_FILE: '2penwrt.config'
+        CONFIG_FILE: 'p2100.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
